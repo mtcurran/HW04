@@ -21,17 +21,28 @@
 
 ################################################################################
 # Imports
-
+import math
 
 # Body
 
+def eval_loop():
+
+		user_input = raw_input("Input here: ")
+
+		while user_input != "done":
+			print eval(user_input)
+			eval_loop()
+			return
 
 
 
 ################################################################################
 def main():
-    pass # Remove this line and uncomment below once eval_loop is defined.
-    # eval_loop()
+	# Remove this line and uncomment below once eval_loop is defined.
+	try:
+		eval_loop()
+   	except:
+   		print "Invalid entry."
     
 
 if __name__ == '__main__':
